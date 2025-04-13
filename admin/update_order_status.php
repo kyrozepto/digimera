@@ -1,5 +1,5 @@
 <?php
-include('./conn.php');
+include('../conn.php');
 header("Content-Type: application/json");
 
 if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
 
     $response['status']['success'] = true;
     $response['status']['code'] = 200;
-    $response['message'] = "Order status updated!";
+    $response['message'] = "Status pesanan berhasil diperbarui.";
     $response['data'] = $_PUT;
 
     echo json_encode($response);
